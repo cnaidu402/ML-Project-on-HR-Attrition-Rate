@@ -1,4 +1,4 @@
-# ML-Project-on-HR-Attrition-Rate
+# ML Project on HR Attrition Rate
 
 ## Overview
 This project focuses on analyzing employee departure data to identify factors influencing their decisions to leave the organization. By leveraging machine learning and data analysis techniques, we aim to develop predictive models for better workforce management.
