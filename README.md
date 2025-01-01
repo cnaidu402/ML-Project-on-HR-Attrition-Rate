@@ -1,39 +1,59 @@
-<h2> <b> Objective:<br></h2>
-The main objective of the project is to identify the employees leaving the organization<br>
-The primarily identifying the factors influencing the leaving the organisation<br>
-**Midterm Project**
+# ML-Project-on-HR-Attrition-Rate
 
-**dataset** - employee_departure_dataset https://drive.google.com/file/d/1XoEt8xC_HCOxofrmFC0Mu_W2oHnfOt9z/view?usp=drive_link
+## Overview
+This project focuses on analyzing employee departure data to identify factors influencing their decisions to leave the organization. By leveraging machine learning and data analysis techniques, we aim to develop predictive models for better workforce management.
 
-***Steps to be followed:***
-1. EDA
-2. Feature Engineering
-3. Create multiple models
-4. Perform cross validation
-5. Create pipelines
-6. Evaluate models
-7. Hyperparameter selection/tuning
+## Dataset
+The project uses the **Employee Departure Dataset**, which can be accessed via [this Google Drive link](https://drive.google.com/file/d/1XoEt8xC_HCOxofrmFC0Mu_W2oHnfOt9z/view?usp=drive_link).
 
-## Choosing the Right Metric
-- Recall: Indicates how well the model identifies employees who are actually leaving.
-- Precision: Shows how accurately the model flags employees as leaving when they are actually staying.
+## Objectives
+The primary goal of this project is to:
+- Identify employees who are likely to leave the organization.
+- Understand the factors influencing employee departures.
 
-<b>Between the two, we prioritize recall over precision due to the business impact of incorrectly predicting an employee as staying when they are actually planning to leave.</b>
+## Steps Followed
+1. **Exploratory Data Analysis (EDA)**: Analyze the dataset to understand trends, patterns, and outliers.
+2. **Feature Engineering**: Create new features to enhance model performance.
+3. **Model Creation**: Build multiple machine learning models.
+4. **Cross-Validation**: Validate models to ensure reliability and avoid overfitting.
+5. **Pipeline Development**: Streamline the process from data preprocessing to model prediction.
+6. **Model Evaluation**: Compare models using metrics such as accuracy, precision, and recall.
+7. **Hyperparameter Tuning**: Optimize model performance by fine-tuning parameters.
 
-## Models Used:
-KNN Model<br>
-Random Forest <br>
-Decision Tree <br>
+## Tools and Libraries
+The following tools and libraries are used in this project:
+- **Pandas**: For data manipulation and analysis.
+- **NumPy**: For numerical computations.
+- **Seaborn** and **Matplotlib**: For data visualization.
+- **Scikit-learn**: For machine learning algorithms and utilities.
 
-### Inference:
-#### The model demonstrates a strong balance between precision and recall, with especially high recall for identifying employees likely to leave.
+## Project Structure
+- **Data Loading and Cleaning**: Load the dataset and handle missing values.
+- **EDA**: Generate insights through statistical summaries and visualizations.
+- **Feature Engineering**: Enhance data with new variables.
+- **Model Building**: Develop and compare various machine learning models.
+- **Evaluation**: Assess model performance with validation metrics.
+- **Tuning**: Improve model accuracy through hyperparameter optimization.
 
-### Best Model ?
+## How to Run
+1. Clone this repository.
+2. Install the required dependencies using:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the Jupyter Notebook to execute the analysis step by step.
 
-##### Among the three models tested (Random Forest, Decision Tree, and KNN), the Decision Tree model (with parameters 'criterion': 'entropy', 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2) performs the best based on:
+## Results
+- Insights about factors affecting employee retention.
+- Predictive models for identifying at-risk employees.
 
-##### - Highest Recall (94.6%): This model effectively captures nearly all employees who are actually leaving, which is crucial for our objective.
-##### - Balanced Performance: It maintains a reasonable precision (74.6%) and F1-score for the "leaving" class, making it reliable without too many false alarms.
-##### - Consistent Accuracy: With a mean accuracy of 88.4%, it performs consistently well across different folds in K-Fold Cross-Validation, indicating good generalization.
+## Future Work
+- Explore additional datasets for broader analysis.
+- Deploy the model in a production environment.
 
-##### Overall, the Decision Tree model’s high recall and balanced metrics make it the most suitable model for predicting employee turnover, aligning well with the business goal of identifying potential leavers accurately.
+
+
+---
+
+**Note**: Ensure you have the dataset downloaded and placed in the appropriate directory before running the notebook.
+
